@@ -15,7 +15,7 @@
   },
   "portfolio_adaptations": [
     "Minimal React 17 entry point and esbuild static build; no original product auth, cloud, storage, or app shell.",
-    "Removed captured-pen fixture buttons; synthetic presets and drawing remain.",
+    "Removed captured-pen fixture controls and unused network loader; synthetic presets and drawing remain.",
     "Narrow screens stack the canvas above scrollable controls; synthetic presets fit the available canvas. Geometry algorithms are unchanged."
   ]
 }

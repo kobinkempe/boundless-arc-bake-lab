@@ -56,10 +56,6 @@ const PRESETS = {
     },
 };
 
-// The two strokes captured from the real pen, served from /public so the lab
-// can bake the same geometry the measurements were taken on.
-const CAPTURED = {}; // Portfolio edition uses synthetic presets only.
-
 const clamp = (v, a, b) => (v < a ? a : v > b ? b : v);
 const RAW = "#e9873a", FILL = "#3ddc97", HAIR = "#ff2d55";
 
@@ -275,18 +271,6 @@ export default function ArcBake() {
         viewRef.current = fitted; setView(fitted);
         rebake();
     };
-    const loadCaptured = (name) => {
-        setBusy(true);
-        fetch(`${process.env.PUBLIC_URL || ""}/${CAPTURED[name]}`)
-            .then((r) => r.json())
-            .then((s) => {
-                setWidth(s.width); widthRef.current = s.width;
-                ptsRef.current = s.pts;
-                rebake();
-            })
-            .catch(() => { setBusy(false); setStats(null); });
-    };
-
     const zoomBy = (f) => setView((v) => {
         const cv = canvasRef.current;
         const cx = cv.width / 2, cy = cv.height / 2;
@@ -342,7 +326,6 @@ export default function ArcBake() {
                 <Label>Presets</Label>
                 {Object.keys(PRESETS).map((n) => <button key={n} onClick={() => loadPreset(n)} style={btn}>{n}</button>)}
                 
-                {Object.keys(CAPTURED).map((n) => <button key={n} onClick={() => loadCaptured(n)} style={btn}>{n}</button>)}
 
                 <Label>Zoom — {view.scale < 10 ? view.scale.toFixed(2) : Math.round(view.scale)}x</Label>
                 <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
