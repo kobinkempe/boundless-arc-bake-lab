@@ -17,7 +17,7 @@ It was built with AI assistance as part of [bound.less](https://bound-less-kk.we
 3. Change the centerline tolerance and see how many arcs are needed.
 4. Use “time both, best of three” to compare the historical arc and cubic pipelines on this browser.
 
-![Arc Bake Lab browser screenshot](docs/screenshots/desktop.png)
+![Arc Bake Lab browser screenshot](docs/screenshots/desktop.jpg)
 
 ## Run locally
 
