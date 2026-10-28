@@ -10,7 +10,7 @@ It was built with AI assistance as part of [bound.less](https://bound-less-kk.we
 
 ## Try it
 
-[Open the live lab](https://kobinkempe.pages.dev/boundless-arc-bake-lab/) · [Read the case study](https://kobinkempe.pages.dev/case-studies/boundless-arc-bake-lab/)
+[Open the live lab](https://kobinkempe.pages.dev/boundless-arc-bake-lab/) · [See project details](https://kobinkempe.pages.dev/projects/boundless-arc-bake-lab/)
 
 1. Choose tight wiggle or self-crossing, or draw on the canvas.
 2. Toggle the raw stroke and baked fill, and inspect the red perimeter.
@@ -33,7 +33,11 @@ Open `http://127.0.0.1:4400`. Drawings and controls exist only in this page’s 
 
 ## What the experiment can tell you
 
-The accuracy panel compares canvas rasterizations. It is useful for this local shape comparison; it does not prove that SVG compositing or the current production renderer is correct. Timings depend on the device and browser. Dense scribble presets can take substantial main-thread time.
+The accuracy panel measures how far the arc version moves from the curve the app drew at the time. It compares canvas rasterizations, so it does not prove that SVG compositing or the current production renderer is correct. Timings depend on the device and browser. Dense scribble presets can take substantial main-thread time.
+
+## What it showed
+
+On the strokes I had captured, the arc version baked three to four times faster than the cubic version and closed every outline without gaps. That result is why bound.less switched to circular arcs throughout: the pen, the baked outline and the eraser all use them now.
 
 ## Source and history
 
