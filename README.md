@@ -10,12 +10,12 @@ It was built with AI assistance as part of [bound.less](https://bound-less-kk.we
 
 ## Try it
 
-[Open the live lab](https://kobin-ai-portfolio.kobinkempe.chatgpt.site/boundless-arc-bake-lab/) · [Read the case study](https://kobin-ai-portfolio.kobinkempe.chatgpt.site/case-studies/boundless-arc-bake-lab/)
+[Open the live lab](https://kobinkempe.pages.dev/boundless-arc-bake-lab/) · [Read the case study](https://kobinkempe.pages.dev/case-studies/boundless-arc-bake-lab/)
 
 1. Choose tight wiggle or self-crossing, or draw on the canvas.
 2. Toggle the raw stroke and baked fill, and inspect the red perimeter.
 3. Change the centerline tolerance and see how many arcs are needed.
-4. Use “time both, best of three” to compare the historical arc and cubic pipelines on this browser.
+4. Use “time both, best of three” to compare the arc and cubic pipelines in this browser.
 
 ![Arc Bake Lab browser screenshot](docs/screenshots/desktop.jpg)
 
@@ -37,9 +37,9 @@ The accuracy panel compares canvas rasterizations. It is useful for this local s
 
 ## Source and history
 
-Recovered from [`src/Pages/ArcBake.js` at commit `f92c1d1`](https://github.com/kobinkempe/bound.less-kk/blob/f92c1d1bc274716c0351591122b41f1502a3a590/src/Pages/ArcBake.js) (26 August 2026). The development routes were removed in cleanup commit `f6f1062` on 1 September 2026. The algorithms and their local geometry dependencies come from the same historical revision so later engine changes cannot silently alter this comparison. `PROVENANCE.json` records the original source hashes and the small portfolio adaptations.
+Recovered from [`src/Pages/ArcBake.js` at commit `f92c1d1`](https://github.com/kobinkempe/bound.less-kk/blob/f92c1d1bc274716c0351591122b41f1502a3a590/src/Pages/ArcBake.js) (August 26, 2026). The development routes were removed in cleanup commit `f6f1062` on September 1, 2026. The algorithms and their local geometry dependencies come from the same revision, so later engine changes cannot silently alter this comparison. `PROVENANCE.json` records the original source hashes and the small portfolio adaptations.
 
-This is a historical research instrument. The current application has continued to evolve. No general speedup or production correctness claim follows from one preset or browser timing.
+This lab preserves an earlier version of the code; the current application has continued to evolve. No general speedup or production correctness claim follows from one preset or browser timing.
 
 ## Dependencies
 
